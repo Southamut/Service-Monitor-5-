@@ -1,0 +1,245 @@
+body {
+  font-family: "Circular Std", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #3b3b3b;
+}
+
+.plan {
+  background-color: #f9f9f9;
+  width: 1920px;
+  height: 1741px;
+}
+
+.integration {
+  width: 1420px;
+  height: 446px;
+  margin: 180px 250px 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.integration h2 {
+  width: 500px;
+  height: 116px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.integration .highlight {
+  background-color: #faded4;
+  border: solid 1px #fbc7b5;
+  padding: 0 0 0 6px;
+}
+
+.partners-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 70px;
+  max-width: 1420px;
+}
+
+.partner {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 5px 30px 56px 0px rgba(55, 55, 55, 0.11);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  width: 276px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner.active {
+  background-color: #ff7342;
+  color: white;
+  opacity: 1;
+}
+
+.pricing {
+  width: 1420px;
+  /* height: 755px; */
+  margin: 0px 250px 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.pricing h2 {
+  width: 500px;
+  height: 58px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0;
+  text-align: center;
+}
+.pricing .highlight {
+  background-color: #faded4;
+  border: solid 1px #fbc7b5;
+  padding: 0 0 0 6px;
+}
+
+.toggle-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 40px 0 80px 0;
+  width: 287px;
+  height: 41px;
+}
+
+.toggle-monthly {
+  font-size: 20px;
+  line-height: 32px;
+  color: #656565;
+}
+
+.toggle-anually {
+  font-size: 20px;
+  line-height: 32px;
+  color: #5a7184;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff7342;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.plancard {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 25px;
+  width: 453.33px;
+  height: 536px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plancard.highlight {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 25px;
+  width: 453.33px;
+  height: 536px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  width: 353.33px;
+  height: 64px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.btn.orange {
+  background-color: #f85a2c;
+  color: #ffffff;
+}
+
+.btn.yellow {
+  background-color: #ffd167;
+  color: #ffffff;
+}
+
+.freeplan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.premiumplan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.businessplan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-detail {
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 32px;
+  color: #5a7184;
+  margin-top: 15px;
+}
+
+.typecard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
