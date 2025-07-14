@@ -28,7 +28,7 @@ header {
 }
 .nav-menu {
     display: flex;
-    gap: 32px;
+    gap: 56px;
 }
 .nav-menu a {
     font-family: 'DM Sans', sans-serif;
@@ -36,19 +36,19 @@ header {
     color: #3B3B3B;
     font-size: 18px;
     font-weight: 500;
-    padding-bottom: 4px;
     transition: color 0.2s;
 }
 .nav-menu a.active,
 .nav-menu a:hover {
     color: #FF7342;
-    border-bottom: 2px solid #FF7342;
+    border-bottom: 1px solid #FF7342;
 }
 .nav-actions {
     font: DM Sans;
     font-size: 16px;
     display: flex;
     gap: 16px;
+    padding-right: 250px;
 }
 .btn-register {
     background: #FFE5A3;
@@ -62,9 +62,6 @@ header {
     font-weight: 700;
     width: 151px;
     height: 64px;
-    position: absolute;
-    top: 38px;
-    left: 1203px;
     opacity: 1;
 }
 .btn-signin {
@@ -78,9 +75,6 @@ header {
     padding: 12px 24px;
     width: 151px;
     height: 64px;
-    position: absolute;
-    top: 38px;
-    left: 1364px;
     opacity: 1;
     border-radius: 4px;
 }
@@ -93,7 +87,8 @@ header {
     gap: 60px;
 }
 .hero-content {
-    max-width: 480px;
+    max-width: 605px;
+    max-height: 240px;
     margin-top: 40px;
 }
 .hero-content h1 {
@@ -103,6 +98,7 @@ header {
     color: #3B3B3B;
     margin-bottom: 32px;
     line-height: 80px;
+    padding-top: 100px;
 }
 .btn-trial {
     background: #FF7342;
@@ -127,16 +123,17 @@ header {
 }
 
 .hero-graphic {
-    flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: flex-end;
+    
 }
 
 .hero-graphic img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 936.9192504882812px;
+    max-height: 666.8287353515625;
+    height:100%;
 }
 
 .logo img {
