@@ -1,26 +1,22 @@
-body {
-  font-family: "Circular Std", sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #3b3b3b;
-}
-
 .plan {
-  background-color: #f9f9f9;
-  width: 1920px;
+  width: 100vw;
   height: 1741px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .integration {
-  width: 1420px;
+  width: 100vw;
   height: 446px;
   margin: 180px 250px 0 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* border:solid 1px #3b3b3b; */
+  position: relative;
 }
 
 .integration h2 {
@@ -40,26 +36,28 @@ body {
 }
 
 .partners-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100vw;
   gap: 10px;
   row-gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
   margin-top: 70px;
-  max-width: 1420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 200px;
+  padding-right: 200px;
+  /* border: solid 1px black; */
 }
 
 .partner {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 1rem;
-  box-shadow: 5px 30px 56px 0px rgba(55, 55, 55, 0.11);
-  opacity: 0.5;
-  transition: all 0.3s ease;
   width: 276px;
   height: 120px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* padding: 1rem; */
+  box-shadow: 5px 30px 56px 0px rgba(55, 55, 55, 0.11);
+  opacity: 0.5;
+  /* transition: all 0.3s ease; */
   text-align: center;
   display: flex;
   align-items: center;
@@ -73,14 +71,15 @@ body {
 }
 
 .pricing {
-  width: 1420px;
+  width: 100vw;
   /* height: 755px; */
-  margin: 0px 250px 0 250px;
+  margin: 150px 250px 0 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  /* border: #3b3b3b solid; */
+  position: relative;
 }
 .pricing h2 {
   width: 500px;
@@ -165,56 +164,72 @@ input:checked + .slider::before {
   margin-bottom: 4rem;
 }
 
+.typecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .plancard {
+  width: 453.33px;
+  height: 536px;
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 25px;
-  width: 453.33px;
-  height: 536px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .plancard.highlight {
+  width: 453.33px;
+  height: 536px;
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 25px;
-  width: 453.33px;
-  height: 536px;
   background-color: #ffffff;
   border: none;
+  border-radius: 15px;
+  box-shadow: 5px 30px 56px 0px rgba(55, 55, 55, 0.11);
 }
 
-.price {
-  font-size: 2rem;
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #3b3b3b;
+}
+
+.price-rate {
+  /* font-size: 2rem; */
   margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .btn {
-  padding: 0.75rem 2rem;
   width: 353.33px;
   height: 64px;
+  font-size: 16px;
+  color: #ffffff;
   border-radius: 4px;
   border: none;
-  font-size: 16px;
   margin-top: 50px;
+  padding: 0.75rem 2rem;
 }
 
 .btn.orange {
   background-color: #f85a2c;
-  color: #ffffff;
 }
 
 .btn.yellow {
   background-color: #ffd167;
-  color: #ffffff;
 }
 
 .freeplan {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: flex-start;
 }
 
@@ -230,6 +245,14 @@ input:checked + .slider::before {
   align-items: flex-start;
 }
 
+.time-relate {
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 26px;
+  color: #5a7184;
+  margin-left: 15px;
+}
+
 .card-detail {
   font-size: 16px;
   font-weight: 400px;
@@ -238,8 +261,124 @@ input:checked + .slider::before {
   margin-top: 15px;
 }
 
-.typecard {
+.bluerectangle {
+  width: 108.9px;
+  height: 108.9px;
+  border-radius: 30px;
+  rotate: 30deg;
+  background-color: #6a99ff;
+  position: absolute;
+  top: 9%;
+  left: 93%;
+}
+
+.skyblueellipse {
+  width: 100.8px;
+  height: 50.4px;
+  border-top-right-radius: 50.4px;
+  border-top-left-radius: 50.4px;
+  rotate: 120deg;
+  background-color: #37dff4;
+  position: absolute;
+  top: 27%;
+  left: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  .plan,
+  .integration,
+  .pricing {
+    width: 100vw;
+    height: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .integration h2,
+  .pricing h2 {
+    width: 250px;
+    height: 68px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 34px;
+    margin-top: 80px;
+    padding: 0;
+  }
+
+  .partners-grid {
+    box-sizing: border-box;
+    max-width: 100%;
+    gap: 15px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .partner {
+    width: 276px;
+    height: 120px;
+    min-width: 0;
+    max-width: 276px;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .toggle-plan {
+    margin: 5px 0 10px 0;
+    width: 287px;
+    height: 41px;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .plancard,
+  .plancard.highlight {
+    width: 100%;
+    min-width: 0;
+    max-width: 340px;
+    height: auto;
+    padding: 24px 12px;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 320px;
+    height: 48px;
+    font-size: 15px;
+    margin-top: 24px;
+    padding: 0.5rem 1rem;
+  }
+
+  .bluerectangle {
+    width: 28.04px;
+    height: 28.04px;
+    border-radius: 11px;
+    rotate: 30deg;
+    position: absolute;
+    top: 1.5%;
+    left: 85%;
+  }
+
+  .skyblueellipse {
+    width: 48.29px;
+    height: 24.14px;
+    rotate: 120deg;
+    position: absolute;
+    top: 6%;
+    left: 3%;
+  }
 }
