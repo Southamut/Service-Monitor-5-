@@ -90,8 +90,14 @@
 @media (max-width: 900px) {
   .footer-container-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* เดิมเป็น flex-start */
     min-height: unset;
+  }
+  .testimonial-left {
+    margin-left: 0; /* ยกเลิก margin ซ้าย */
+    align-items: center; /* จัดข้อความตรงกลาง */
+    text-align: center;
+    max-width: 100%;
   }
   .testimonial-right {
     justify-content: center;
@@ -101,6 +107,18 @@
   .testimonial-circle-container {
     width: 220px;
     height: 220px;
+    display: flex;
+    align-items: center; /* จัดรูปให้อยู่กลาง container */
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .testimonial-circle-img {
+    margin: 0 auto;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
@@ -253,6 +271,15 @@ h6 {
   color: #222;
   margin-right: 4px;
 }
+
+.highlight {
+  width: 150px;
+  background-color: rgb(240, 15, 15);
+}
+
+.highlight {
+  background-color: #ffffff31;
+}
 @media (max-width: 900px) {
   .footer-container-contact {
     grid-template-columns: 1fr 1fr;
@@ -275,11 +302,107 @@ h6 {
     font-size: 1.3rem;
   }
 }
-.highlight {
-  width: 150px;
-  background-color: rgb(240, 15, 15);
+
+@media (max-width: 600px) {
+  footer,
+  .footer-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-section,
+  .footer-links,
+  .footer-contact,
+  .footer-logo {
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+
+  .footer-logo img {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  .footer-links ul,
+  .footer-contact ul {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+
+  .footer-links li,
+  .footer-contact li {
+    margin: 5px 0;
+  }
+
+  .footer-social {
+    justify-content: center !important;
+    margin: 10px 0 !important;
+  }
+
+  .footer-bottom {
+    font-size: 12px !important;
+    margin-top: 10px !important;
+  }
+
+  /* ปรับขนาดฟอนต์และปุ่ม */
+  .footer-section,
+  .footer-links,
+  .footer-contact,
+  .footer-bottom {
+    font-size: 14px !important;
+  }
+  .footer-btn,
+  .footer input[type="submit"],
+  .footer button {
+    width: 100% !important;
+    font-size: 14px !important;
+    padding: 8px 0 !important;
+    margin: 8px 0 !important;
+  }
+  .testimonial-quote-text {
+    width: 40vh;
+    font-size: 24px;
+    order: 0;
+  }
+  .testimonial-circle-img {
+    width: 80vw;
+  }
+  .testimonial-left {
+    order: 1;
+    margin-top: 130px;
+    margin-bottom: -50px;
+  }
+
+  .footer-container-trail {
+    display: flex;
+    align-items: center;
+  }
+  .submit-button {
+    width: 50vw;
+  }
 }
 
-.highlight {
-  background-color: #ffffff31;
+/* สมมติว่ามี div ครอบ testimonial, trial, footer ชื่อ .main-row-container */
+.main-row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* หรือ center ตามต้องการ */
+  justify-content: center; /* หรือ space-between */
+  gap: 32px; /* ระยะห่างแต่ละกล่อง */
+}
+
+/* ปรับขนาดแต่ละกล่องให้เหมาะสม */
+.testimonial-section {
+  flex: 1 1 30%;
+  max-width: 350px;
+}
+.trial-section {
+  flex: 1 1 30%;
+  max-width: 350px;
+}
+.footer-section {
+  flex: 1 1 30%;
+  max-width: 350px;
 }

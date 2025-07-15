@@ -15,9 +15,10 @@
 .feature-head h2 {
   margin-bottom: 5rem;
   font-size: 2.5rem;
+  text-align: center;
 }
 
-.highlight {
+.feature-head .highlight {
   background-color: #ffe3db;
 }
 
@@ -38,7 +39,7 @@
   max-width: 450px;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   padding: 2rem;
   gap: 2rem;
   box-shadow: 0 1rem 1rem rgba(177, 177, 177, 0.3);
@@ -65,6 +66,10 @@
   gap: 3rem;
   width: 100vw;
   padding: 5rem 10rem;
+}
+
+.option-list-container .highlight {
+  background-color: #ffe3db;
 }
 
 .option-image {
@@ -101,7 +106,6 @@
 
 .option-list-container ul {
   list-style-type: none;
-  position: relative;
   font-family: DM Sans;
 }
 
@@ -109,10 +113,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: 580px;
   background-color: #fff3ef;
   padding: 1.5rem 1rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   border-radius: 5px;
+  position: relative;
 }
 
 .option-list-container ul .dot {
@@ -139,4 +145,34 @@
   background-color: #ff7342;
   border: none;
   color: white;
+}
+
+/* For mobile */
+@media only screen and (max-width: 600px) {
+  .feature-container {
+    padding: 5rem 2rem;
+    margin-top: 10rem;
+  }
+
+  .feaure-card-container {
+    gap: 1 rem;
+    box-shadow: 0 0.5 rem 0.5 rem rgba(177, 177, 177, 0.3);
+  }
+
+  .option-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-image {
+    width: 100vw;
+    padding: 2rem;
+  }
+
+  .option-list-container {
+    align-items: flex-start;
+    width: 100vw;
+    padding: 2rem;
+  }
 }
